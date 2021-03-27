@@ -25,8 +25,7 @@
                     <li class="p-3 border mx-3"><a href="#">Add new article</a></li>
                 </ul>
             </nav>
-        </header>
-        
+        </header>        
 
         @yield('content')
     </body>
