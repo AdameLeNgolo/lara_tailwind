@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-	// $articles = 
+	$articles = Article::paginate(6);
 
-    return view('welcome');
+    return view('welcome',compact('articles'));
 });
