@@ -2,6 +2,6 @@
 
 @section('content')
 	
-	
+	<p>{{ $article->title }}</p>
 
 @stop

@@ -44,9 +44,10 @@ class ArticleController extends Controller
      * @param  \App\Models\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Article $article)
     {
-        dd('Dhh');
+        // $article = Article::firstWhere('slug', $article)
+       return view('pages.article.show',compact('article'));
     }
 
     /**
