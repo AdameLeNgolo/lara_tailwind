@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+	$articles = Article::paginate(6);
+
+    return view('welcome',compact('articles'));
 });
+
+Route::resource('article',ArticleController::class);
